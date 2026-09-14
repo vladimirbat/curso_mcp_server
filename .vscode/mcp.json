@@ -1,0 +1,23 @@
+{
+  "servers": {
+    "tmdb-movies": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "${workspaceFolder}/src/index.js"
+      ],
+      "env": {
+        "TMDB_API_KEY": "${input:tmdbApiKey}",
+        "TMDB_LANGUAGE": "es-ES"
+      }
+    }
+  },
+  "inputs": [
+    {
+      "id": "tmdbApiKey",
+      "type": "promptString",
+      "description": "TMDB API Key",
+      "password": true
+    }
+  ]
+}
